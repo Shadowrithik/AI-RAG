@@ -26,17 +26,20 @@ This improves accuracy and reduces hallucinations because the model answers usin
 > If your repo uses a specific framework (LangChain / LlamaIndex / Haystack), you can add it here.
 
 ## Model (Ollama)
-This project is designed to work with models served by Ollama, for example:
-- `llama3`
+This project is designed to work with **any model served by Ollama**.
+
+If your laptop/PC is low-spec, prefer smaller/faster models such as:
 - `mistral`
-- `phi3`
+- `gemma`
+
+You can also use other models like `llama3` depending on your hardware.
 
 **Configure the model name** in your config or environment variables (see below).
 
-## Python version
-Recommended: **Python 3.10+** (3.10 or 3.11 is ideal for most RAG stacks).
+## Python version (required)
+**Python 3.11.x is required.**
 
-If your project is pinned to a specific version, update this section accordingly.
+> If you use any other Python version, the project may not run correctly.
 
 ## Efficiency notes
 RAG efficiency depends on:
@@ -58,13 +61,37 @@ git clone https://github.com/Shadowrithik/AI-RAG.git
 cd AI-RAG
 ```
 
-### 2) Create & activate a virtual environment
+### 2) Create a Python 3.11 virtual environment (required)
+Make sure `python` points to Python **3.11.x**:
+```bash
+python --version
+```
+
+Create a virtual environment:
 ```bash
 python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
+```
+
+Activate it:
+
+**Windows (PowerShell):**
+```bash
+.\.venv\Scripts\Activate.ps1
+```
+
+**Windows (cmd):**
+```bash
+.\.venv\Scripts\activate.bat
+```
+
+**macOS/Linux:**
+```bash
 source .venv/bin/activate
+```
+
+Upgrade pip:
+```bash
+python -m pip install --upgrade pip
 ```
 
 ### 3) Install dependencies
@@ -79,9 +106,13 @@ poetry install
 ```
 
 ### 4) Install and run Ollama
-Install Ollama from its official site and pull a model:
+Install Ollama from its official site and pull a model.
+
+Low-spec recommendation:
 ```bash
-ollama pull llama3
+ollama pull mistral
+# or
+ollama pull gemma
 ```
 
 Start Ollama (usually it runs as a background service). Test it:
@@ -92,14 +123,16 @@ ollama list
 ### 5) Configure environment variables
 Create a `.env` file (or export env vars) with values your app expects. Example:
 ```env
-OLLAMA_MODEL=llama3
+OLLAMA_MODEL=mistral
 # Optional examples (rename to match your code)
 CHUNK_SIZE=800
 CHUNK_OVERLAP=100
 TOP_K=4
 ```
 
-## How to use
+## How to run
+
+> The exact entrypoint can differ by repo structure. If you have different file names, update the commands below.
 
 ### Ingest / index your documents
 Run your ingestion script/command (replace with your actual command):
@@ -107,15 +140,11 @@ Run your ingestion script/command (replace with your actual command):
 python ingest.py --source ./data
 ```
 
-### Ask questions
+### Start the app
 Run the app (replace with your entrypoint):
 ```bash
 python app.py
 ```
-
-Example prompt:
-- “Summarize the documents in my dataset.”
-- “What does this project do?”
 
 ## Customize
 You can customize AI-RAG by changing:
