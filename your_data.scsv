@@ -1,0 +1,11 @@
+Title,Content,Category,Tags,Date,Rating
+Introduction to AI,Artificial Intelligence enables machines to mimic human intelligence and perform tasks such as learning reasoning and problem solving.,AI,"ai,ml,basics",2024-01-10,5
+What is RAG,RAG stands for Retrieval Augmented Generation where external data is retrieved and provided to a language model for more accurate answers.,AI,"rag,llm,ai",2024-02-15,5
+Healthy Morning Routine,A good morning routine includes waking up early exercise meditation and planning your day for better productivity.,Lifestyle,"health,productivity",2024-03-01,4
+Basics of JavaScript,JavaScript is a programming language used to create interactive web applications and dynamic content.,Programming,"javascript,web",2023-12-20,5
+React Components,React components are reusable building blocks used to create user interfaces in a structured and efficient way.,Programming,"react,frontend",2024-01-25,5
+Importance of Discipline,Discipline is the foundation of success and helps in maintaining consistency and focus over long periods.,Philosophy,"discipline,mindset",2024-02-05,5
+Workout Fundamentals,Strength training and proper nutrition are essential for building muscle and improving physical fitness.,Fitness,"workout,health",2024-01-18,4
+API Basics,An API allows different software systems to communicate with each other by sending requests and receiving responses.,Programming,"api,backend",2024-02-10,5
+Prompt Engineering,Prompt engineering involves designing inputs to guide AI models toward generating better and more accurate responses.,AI,"prompt,llm",2024-03-05,5
+Time Management,Effective time management involves prioritizing tasks avoiding distractions and maintaining focus.,Productivity,"time,focus",2024-01-30,4
